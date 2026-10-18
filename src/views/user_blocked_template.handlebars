@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Hello {{name}},</h2>
+
+    <p>
+      We are writing to inform you that your Readify account
+      has been blocked by an administrator.
+    </p>
+
+    <p>
+      While your account is blocked, you cannot log in or
+      access protected account features.
+    </p>
+
+    {{#if reason}}
+      <p><strong>Reason:</strong> {{reason}}</p>
+    {{/if}}
+
+    <p>
+      If you believe this action was taken in error,
+      please contact our support team.
+    </p>
+
+    <p>Regards,<br />Readify Team</p>
+  </body>
+</html>
