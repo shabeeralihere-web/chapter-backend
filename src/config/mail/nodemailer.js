@@ -1,3 +1,4 @@
+
 import path from "path";
 import { fileURLToPath } from "url";
 import nodemailer from "nodemailer";
@@ -51,9 +52,7 @@ const sendEmail = async (to, subject, template, context = {}) => {
   };
 
   try {
-    const result = await transport.sendMail(mailOptions);
-    console.log(`Email sent successfully to ${to}`);
-    return result;
+    return await transport.sendMail(mailOptions);
   } catch (error) {
     console.error("Failed to send email:", error.message);
     throw error;
